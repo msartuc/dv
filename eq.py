@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+
 import plotly.express as px
 
 path = Path('eq_data/eq_data_30_day_m1.geojson')
@@ -21,6 +22,7 @@ for eq_dict in all_eq_dicts:
 print(mags[:10])
 print(lons[:5])
 print(lats[:5])
+
 
 title = 'Global Earthquakes'
 fig = px.scatter_geo(lat=lats, lon=lons, size=mags, title=title)
